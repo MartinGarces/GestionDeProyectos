@@ -14,13 +14,14 @@ interface User{
 }
 
 const userSchema = new Schema<User>({
+    
     nombres:{
         type:String,
-        required:true,
+        requiered:true,
     },
     apellidos:{
         type:String,
-        required:true,
+        requiered:true,
         
     },    
 
@@ -33,6 +34,7 @@ const userSchema = new Schema<User>({
     correo:{
         type:String,
         required:true, 
+        unique:true,
     },
 
     tipo_usuario:{
